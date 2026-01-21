@@ -15,7 +15,7 @@ async function main() {
 
   app.use(cors({
     origin: [
-      "https://yoga-3-4vkr4rijrsagxangxvcuqq.streamlit.app/",
+      "https://yoga-3-4vkr4rijrsagxangxvcuqq.streamlit.app",
       "http://localhost:8501"
     ],
     methods: ["GET", "POST", "OPTIONS"],
