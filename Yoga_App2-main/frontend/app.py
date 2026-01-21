@@ -33,7 +33,7 @@ if ask_clicked and query.strip():
     with st.spinner("Thinking..."):
         try:
             resp = requests.post(
-                f"{BACKEND_URL}/ask",
+                f"{BACKEND_URL}/api/ask",
                 json={"question": query},
                 timeout=60
             )
@@ -86,7 +86,7 @@ if ask_clicked and query.strip():
                     if st.button("👍 Yes"):
                         try:
                             requests.post(
-                                f"{BACKEND_URL}/feedback",
+                                f"{BACKEND_URL}/api/feedback",
                                 json={
                                     "query": query,
                                     "rating": "up",
